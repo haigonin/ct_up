@@ -1,0 +1,243 @@
+/* 画面全体の背景と中央揃え */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f7ff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 中央のカード */
+.container {
+  width: 320px;
+  padding: 28px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* 見出し */
+h1 {
+  margin: 0 0 18px;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+/* カウント数字 */
+.count-box {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+/* プログレスバー */
+progress {
+  width: 100%;
+  height: 18px;
+  appearance: none;
+  margin-bottom: 20px;
+}
+
+progress::-webkit-progress-bar {
+  background: #ebf2ff;
+  border-radius: 12px;
+}
+
+progress::-webkit-progress-value {
+  background: #3b82f6;
+  border-radius: 12px;
+}
+
+/* ボタン */
+button {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* ステータス表示 */
+.status {
+  min-height: 28px;
+  margin-top: 18px;
+  font-size: 1rem;
+  color: #16a34a;
+}
+
+/* 絵文字表示 */
+.emoji {
+  margin-top: 12px;
+  font-size: 3rem;
+  min-height: 3.5rem;
+}
+
+/* ナビゲーションリンク */
+.nav-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+/* 収穫統計 */
+.harvest-stats {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 2px solid #ebf2ff;
+}
+
+.stats-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* 料理ページ用 */
+.inventory-list {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.inventory-list p {
+  margin: 4px 0;
+  color: #334155;
+}
+
+.select-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 1rem;
+}
+
+.eat-panel {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.eat-panel button {
+  width: 100%;
+}
+
+.cook-result {
+  margin-top: 18px;
+  min-height: 2.5rem;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.sell-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.sell-row label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.sell-quantity {
+  width: 72px;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  text-align: right;
+}
+
+.coin-display {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+  font-weight: bold;
+  color: #111827;
+  z-index: 10;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  background: #f8fafc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-emoji {
+  font-size: 1.5rem;
+}
+
+.stat-count {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.no-stats {
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+  margin: 0;
+}

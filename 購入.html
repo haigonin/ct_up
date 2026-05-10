@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>購入</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>購入</h1>
+    <p>たねを購入して、収穫ページで植えましょう。</p>
+
+    <div class="inventory-list">
+      <div class="stats-title">たねリスト</div>
+      <div id="seedPurchaseContainer"></div>
+    </div>
+
+    <button id="buyButton">購入</button>
+    <p id="buyStatus" class="cook-result"></p>
+
+    <div class="nav-links">
+      <a href="カウントアップ.html" class="nav-link">収穫ページへ</a>
+      <a href="料理.html" class="nav-link">料理ページへ</a>
+      <a href="冒険.html" class="nav-link">冒険ページへ</a>
+      <a href="売却.html" class="nav-link">売却ページへ</a>
+    </div>
+  </div>
+
+  <div id="coinDisplay" class="coin-display"></div>
+
+  <script src="coins.js"></script>
+  <script src="purchase.js"></script>
+</body>
+</html>

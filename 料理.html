@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>料理</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>料理</h1>
+    <p>収穫した野菜から2つを選んで、料理をつくります。</p>
+
+    <div class="select-row">
+      <label>
+        1つ目の材料
+        <select id="ingredient1"></select>
+      </label>
+      <label>
+        2つ目の材料
+        <select id="ingredient2"></select>
+      </label>
+    </div>
+
+    <button id="cookButton">料理する</button>
+    <div class="nav-links">
+      <a href="カウントアップ.html" class="nav-link">収穫ページへ戻る</a>
+      <a href="冒険.html" class="nav-link">冒険ページへ</a>
+      <a href="購入.html" class="nav-link">購入ページへ</a>
+      <a href="売却.html" class="nav-link">売却ページへ</a>
+    </div>
+
+    <div id="cookResult" class="cook-result"></div>
+
+    <div class="inventory-list">
+      <div class="stats-title">収穫物在庫</div>
+      <div id="inventoryContainer"></div>
+    </div>
+
+    <div class="inventory-list">
+      <div class="stats-title">手に入れた料理</div>
+      <div id="dishesContainer"></div>
+      <div class="eat-panel">
+        <select id="dishSelect"></select>
+        <button id="eatButton">効果は一回！食べる！</button>
+     <p>注意：料理の効果は重複しません。</p>
+        <p id="eatStatus" class="cook-result"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="coins.js"></script>
+  <script src="cooking.js"></script>
+  <div id="coinDisplay" class="coin-display"></div>
+</body>
+</html>

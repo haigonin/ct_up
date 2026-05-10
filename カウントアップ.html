@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>収穫カウント</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>収穫カウント</h1>
+
+    <!-- 現在のカウント数を表示 -->
+    <div class="count-box">
+      <span id="countValue">0</span>
+      <span> / 10</span>
+    </div>
+
+    <!-- 進行状況を示すプログレスバー -->
+    <progress id="progressBar" value="0" max="100"></progress>
+
+    <!-- カウント開始ボタン -->
+    <button id="startButton">植える</button>
+    <div class="nav-links">
+      <a href="料理.html" class="nav-link">料理ページへ</a>
+      <a href="冒険.html" class="nav-link">冒険ページへ</a>
+      <a href="購入.html" class="nav-link">購入ページへ</a>
+      <a href="売却.html" class="nav-link">売却ページへ</a>
+    </div>
+
+  <!-- ランダム野菜絵文字表示 -->
+    <div id="emojiDisplay" class="emoji"></div>
+
+    <!-- 収穫可能などのステータス表示 -->
+    <p id="statusText" class="status"></p>
+
+    <div class="inventory-list">
+      <div class="stats-title">たね</div>
+      <label>
+        使うたね
+        <select id="seedSelect"></select>
+      </label>
+      <div id="seedInventoryContainer"></div>
+    </div>
+
+    <!-- 収穫統計表示 -->
+    <div id="harvestStatsContainer" class="harvest-stats"></div>
+  </div>
+  <script src="coins.js"></script>
+  <script src="count.js"></script>
+  <div id="coinDisplay" class="coin-display"></div>
+</body>
+</html>

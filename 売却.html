@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>売却</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>売却</h1>
+    <p>冒険獲得品と料理を売却します。</p>
+
+    <div class="inventory-list">
+      <div class="stats-title">冒険獲得品</div>
+      <div id="adventureSellContainer"></div>
+    </div>
+
+    <div class="inventory-list">
+      <div class="stats-title">料理</div>
+      <div id="dishSellContainer"></div>
+    </div>
+
+    <button id="sellButton">売却する</button>
+    <p id="sellStatus" class="cook-result"></p>
+
+    <div class="nav-links">
+      <a href="カウントアップ.html" class="nav-link">収穫ページへ</a>
+      <a href="料理.html" class="nav-link">料理ページへ</a>
+      <a href="冒険.html" class="nav-link">冒険ページへ</a>
+      <a href="購入.html" class="nav-link">購入ページへ</a>
+    </div>
+  </div>
+
+  <div id="coinDisplay" class="coin-display"></div>
+
+  <script src="coins.js"></script>
+  <script src="sell.js"></script>
+</body>
+</html>
