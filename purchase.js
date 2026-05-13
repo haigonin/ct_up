@@ -97,6 +97,31 @@ function initializePurchasePage() {
   if (buyButton) {
     buyButton.addEventListener("click", purchaseSeeds);
   }
+
+  const addPlotButton = document.getElementById("addPlotButton");
+  if (addPlotButton) {
+    addPlotButton.addEventListener("click", addPlot);
+  }
+}
+
+function addPlot() {
+  const currentAdditionalPlots = Number(localStorage.getItem("additionalPlots") || 0);
+  const maxAdditionalPlots = 2; // 最大追加畑数
+
+  if (currentAdditionalPlots >= maxAdditionalPlots) {
+    document.getElementById("addPlotStatus").textContent = "これ以上畑を追加できません。";
+    return;
+  }
+
+  const cost = 20000;
+  const remaining = subtractCoins(cost);
+  if (remaining === null) {
+    document.getElementById("addPlotStatus").textContent = "コインが足りません。";
+    return;
+  }
+
+  localStorage.setItem("additionalPlots", String(currentAdditionalPlots + 1));
+  document.getElementById("addPlotStatus").textContent = `畑を追加しました！ (残りコイン: ${remaining})`;
 }
 
 window.addEventListener("DOMContentLoaded", initializePurchasePage);

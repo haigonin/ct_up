@@ -13,24 +13,40 @@
 
     <div class="count-box">
       <span id="adventureCount">0</span>
-      <span> / 10</span>
+      <span> / 30</span>
     </div>
-    <progress id="adventureProgress" value="0" max="100"></progress>
+    <progress id="adventureProgress" value="0" max="300"></progress>
     <button id="adventureButton">冒険に出る</button>
 
-    <div class="nav-links">
-      <a href="カウントアップ.html" class="nav-link">収穫ページへ</a>
-      <a href="料理.html" class="nav-link">料理ページへ</a>
-      <a href="購入.html" class="nav-link">購入ページへ</a>
-      <a href="売却.html" class="nav-link">売却ページへ</a>
+    <div id="adventureResult" class="cook-result"></div>
+
+    <div class="inventory-list">
+      <div class="equipment-row">
+        <label>武器<select id="weaponSelect"></select></label>
+        <label>防具<select id="armorSelect"></select></label>
+        <label>アクセサリー<select id="accessorySelect"></select></label>
+      </div>
+      <button id="equipButton">装備する</button>
+      <p id="strengthText" class="cook-result">強さ: 0</p>
     </div>
 
-    <div id="adventureResult" class="cook-result"></div>
+    <div class="inventory-list">
+      <div class="stats-title">遭遇ログ</div>
+      <div id="encounterLogContainer"></div>
+    </div>
 
     <div class="inventory-list">
       <div class="stats-title">冒険獲得品</div>
       <div id="adventureInventory"></div>
     </div>
+     <div class="nav-links">
+      <a href="カウントアップ.html" class="nav-link">収穫ページへ</a>
+      <a href="料理.html" class="nav-link">料理ページへ</a>
+      <a href="購入.html" class="nav-link">購入ページへ</a>
+      <a href="売却.html" class="nav-link">売却ページへ</a>
+      <a href="工房.html" class="nav-link">工房ページへ</a>
+    </div>
+
   </div>
 
   <script src="coins.js"></script>

@@ -76,12 +76,12 @@ function renderAdventureSellList() {
 
   const groups = groupAdventureItems(items);
   container.innerHTML = groups.map((group) => {
-    const value = group.power * 50;
+    const value = group.name === "泥まみれの宝" ? 10 : group.power * 50;
     return `
       <div class="sell-row sell-adventure-row" data-name="${group.name}" data-power="${group.power}" data-count="${group.count}">
         <label>
           <input type="checkbox" class="sell-checkbox" />
-          ${group.name} × ${group.count} (1個 ${value}コイン)
+          ${group.name} (強さ: ${group.power}) × ${group.count} (1個 ${value}コイン)
         </label>
         <input type="number" class="sell-quantity" min="1" max="${group.count}" value="${group.count}" />
       </div>
@@ -154,7 +154,8 @@ function sellSelectedItems() {
     const quantity = Math.min(Number(quantityInput.value), Number(row.dataset.count));
     if (quantity <= 0) return;
     const power = Number(row.dataset.power);
-    totalCoins += power * 50 * quantity;
+    const value = row.dataset.name === "泥まみれの宝" ? 10 : power * 50;
+    totalCoins += value * quantity;
     removeAdventureItems(row.dataset.name, power, quantity);
   });
 

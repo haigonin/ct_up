@@ -139,6 +139,31 @@ button:disabled {
   color: #334155;
 }
 
+.equipment-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.equipment-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.95rem;
+}
+
+.log-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.log-list li {
+  margin-bottom: 6px;
+  line-height: 1.4;
+  color: #334155;
+}
+
 .select-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
